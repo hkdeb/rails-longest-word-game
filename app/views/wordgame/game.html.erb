@@ -1,0 +1,16 @@
+<p>Here are your available letters:</p>
+
+
+<%= @grid %>
+<br>
+<br>
+
+<% @start_time %>
+
+<form action="/score">
+  <label for="question">What is your longest word?</label>
+  <input type="hidden" name="grid_variable" value="<%= @grid %>">
+  <input type="hidden" name="start_time" value="<%= @start_time  %>">
+  <input type="text" id="question" name="attempt" placeholder="Onomatopoeia">
+  <input type="submit" value="Get score!">
+</form>
